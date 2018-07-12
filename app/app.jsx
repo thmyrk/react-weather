@@ -9,11 +9,6 @@ var Examples = require('Examples');
 ReactDOM.render(
   <Router history={hashHistory}>
     <div>
-      <ul>
-        <li><NavLink exact to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</NavLink></li>
-        <li><NavLink exact to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</NavLink></li>
-        <li><NavLink exact to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</NavLink></li>
-      </ul>
       <Route path="/" component={Main} />
       <Route exact path="/" component={Weather} />
       <Route path="/about" component={About} />
