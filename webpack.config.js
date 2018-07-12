@@ -14,7 +14,8 @@ module.exports = {
       WeatherForm: path.resolve(__dirname, 'app/components/WeatherForm.jsx'),
       WeatherMessage: path.resolve(__dirname, 'app/components/WeatherMessage.jsx'),
       About: path.resolve(__dirname, 'app/components/About.jsx'),
-      Examples: path.resolve(__dirname, 'app/components/Examples.jsx')
+      Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
+      openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx')
     },
     extensions: ['.js', '.jsx']
   },
@@ -29,5 +30,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/
       }
     ]
-  }
+  },
+  devtool: 'eval-source-map'
 };
