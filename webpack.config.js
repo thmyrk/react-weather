@@ -1,7 +1,18 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+    'jquery/dist/jquery.min.js',
+    'foundation-sites/dist/js/foundation.min.js',
+    './app/app.jsx'
+  ],
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -28,6 +39,13 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+        ]
       }
     ]
   },
