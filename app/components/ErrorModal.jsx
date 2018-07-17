@@ -2,21 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import createReactClass from 'create-react-class'
 
-var ErrorModal = createReactClass({
-  getDefaultProps: () => {
+class ErrorModal extends React.Component {
+  getDefaultProps = () => {
     return {
       title: 'Error'
     };
-  },
+  }
   propTypes: {
     title: PropTypes.string,
     message: PropTypes.string.isRequired
-  },
-  componentDidMount: () => {
+  }
+  componentDidMount = () => {
     var modal = new Foundation.Reveal($('#error-modal'));
     modal.open();
-  },
-  render: function () {
+  }
+  render() {
     var {title, message} = this.props;
     return (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
@@ -30,6 +30,6 @@ var ErrorModal = createReactClass({
       </div>
     );
   }
-});
+};
 
-module.exports = ErrorModal;
+export default ErrorModal;

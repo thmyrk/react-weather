@@ -27,7 +27,9 @@ module.exports = {
       About: path.resolve(__dirname, 'app/components/About.jsx'),
       Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
       openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
-      ErrorModal: path.resolve(__dirname, 'app/components/ErrorModal.jsx')
+      ErrorModal: path.resolve(__dirname, 'app/components/ErrorModal.jsx'),
+      applicationStyles: path.resolve(__dirname, 'app/styles/app.scss'),
+      routerHistory: path.resolve(__dirname, 'app/modules/history.jsx')
     },
     extensions: ['.js', '.jsx']
   },
@@ -46,6 +48,14 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
         ]
       }
     ]

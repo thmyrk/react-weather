@@ -1,14 +1,15 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
-var Nav = require('Nav');
-var Weather = require('Weather');
-var About = require('About');
-var Examples = require('Examples');
-import { BrowserRouter as Router, Route, hashHistory, NavLink } from 'react-router-dom'
+import React from 'react'
+import createReactClass from 'create-react-class'
+import Nav from 'Nav'
+import Weather from 'Weather'
+import About from 'About'
+import Examples from 'Examples'
+import { Router, Route, NavLink } from 'react-router-dom'
+import history from 'routerHistory'
 
-var Main = (props) => {
+var Main = () => {
   return (
-    <Router history={hashHistory}>
+    <Router history={history}>
       <div>
         <Nav />
         <div className="grid-container">

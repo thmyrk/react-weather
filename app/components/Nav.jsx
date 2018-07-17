@@ -1,11 +1,19 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
+import React from 'react'
+import createReactClass from 'create-react-class'
 import { NavLink } from 'react-router-dom'
+import history from 'routerHistory'
 
 var Nav = createReactClass({
   onSearch: function (e) {
     e.preventDefault();
-    alert('Not yet wired up');
+
+    var location = this.refs.navLocation.value;
+    var encodedLocation = encodeURIComponent(location);
+
+    if (location.length > 0) {
+      this.refs.navLocation.value = '';
+      history.push('/?location=' + encodedLocation);
+    }
   },
   render: function () {
     return (
@@ -21,7 +29,7 @@ var Nav = createReactClass({
         <div className="tob-bar-right">
           <form onSubmit={this.onSearch}>
             <ul className="menu">
-              <li><input type="search" placeholder="Put your city name" /></li>
+              <li><input type="search" ref="navLocation" placeholder="Enter city name" /></li>
               <li><input type="submit" className="button" value="Get weather" /></li>
             </ul>
           </form>
