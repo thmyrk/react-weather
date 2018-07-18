@@ -5,16 +5,12 @@ import PropTypes from 'prop-types'
 import createReactClass from 'create-react-class'
 
 class ErrorModal extends React.Component {
-  getDefaultProps = () => {
+  getDefaultProps() {
     return {
       title: 'Error'
     };
   }
-  propTypes: {
-    title: PropTypes.string,
-    message: PropTypes.string.isRequired
-  }
-  componentDidMount = () => {
+  componentDidMount() {
     var {title, message} = this.props;
     var modalMarkup = (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
@@ -41,5 +37,10 @@ class ErrorModal extends React.Component {
     );
   }
 };
+
+ErrorModal.propTypes = {
+  title: PropTypes.string,
+  message: PropTypes.string.isRequired
+}
 
 export default ErrorModal;

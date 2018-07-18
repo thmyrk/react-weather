@@ -1,4 +1,4 @@
-var axios = require('axios');
+import axios from 'axios'
 
 const OPEN_WEATHER_MAP_URL = 'https://api.openweathermap.org/data/2.5/weather?appid=2e00666f787ce64d4d4f8643aea0818b&units=metric';
 

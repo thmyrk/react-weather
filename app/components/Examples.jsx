@@ -1,8 +1,8 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
+import React from 'react'
+import createReactClass from 'create-react-class'
 import { NavLink } from 'react-router-dom'
 
-var Examples = (props) => {
+const Examples = (props) => {
   return (
     <div>
       <h1 className="text-center page-title">Examples</h1>

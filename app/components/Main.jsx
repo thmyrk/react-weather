@@ -1,10 +1,9 @@
 import React from 'react'
-import createReactClass from 'create-react-class'
 import Nav from 'Nav'
 import Weather from 'Weather'
 import About from 'About'
 import Examples from 'Examples'
-import { Router, Route, NavLink } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 import history from 'routerHistory'
 
 var Main = () => {

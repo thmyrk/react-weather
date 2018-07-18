@@ -1,5 +1,5 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
+import React from 'react'
+import createReactClass from 'create-react-class'
 
 var WeatherMessage = (props) => {
   return (
