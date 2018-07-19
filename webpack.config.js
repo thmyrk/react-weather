@@ -14,8 +14,8 @@ module.exports = {
     })
   ],
   output: {
-    path: __dirname,
-    filename: './public/bundle.js'
+    path: __dirname + '/public/',
+    filename: './bundle.js'
   },
   resolve: {
     alias: {
@@ -57,6 +57,15 @@ module.exports = {
           { loader: 'css-loader' },
           { loader: 'sass-loader' }
         ]
+      },
+      {
+        test: /\.[ot]tf$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: "./fonts/[name].[ext]"
+          }
+        }
       }
     ]
   },

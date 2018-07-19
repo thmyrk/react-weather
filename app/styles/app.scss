@@ -1,12 +1,75 @@
 $space-large: 2.5rem;
+$space-small: 2rem;
 $title-color: #555;
+$nav-background-color: #e6e8e9;
+$blue: #1779ba;
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Regular.otf');
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('./fonts/Poppins-Bold.otf');
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+// navbar
+.top-bar {
+  color: #2c3e50;
+  background-color: $nav-background-color;
+
+  .menu {
+    background-color: $nav-background-color;
+
+    a.active {
+      color: #fefefe;
+    }
+  }
+
+  .top-bar-left {
+
+  }
+
+  .top-bar-left {
+
+  }
+}
+
+// forms
+input[type=search] {
+  border: 2px solid #cbd0d3;
+  border-radius: 0;
+}
+
+.button {
+  border-radius: 0;
+  font-weight: bold;
+
+  .blue {
+    background-color: $blue;
+    border: 2px solid $blue;
+  }
+}
+
+// h1 {
+//   font-size: 40px;
+// }
 
 .page-title {
   color: $title-color;
-  margin-top: $space-large;
-  margin-bottom: $space-large;
+  margin-top: $space-small;
+  margin-bottom: $space-small;
+  padding: $space-small;
+  font-family: 'PoppinsBold';
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
-input[type=search] {
-  box-shadow: none;
+.uppercase {
+  text-transform: uppercase;
 }
