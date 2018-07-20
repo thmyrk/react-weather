@@ -8,7 +8,9 @@ Here are some of the tools I used:
 * Open Weather Map - I used Open Weather Map to search for weather data by city name.
 * Webpack - this was used to bundle all css and js assets.
 
-## Running the app
+App is running on Heroku: https://how-hot-is-it.herokuapp.com/
+
+## Running the app locally
 * fetch repository
 * `npm install`
 * `webpack --mode=development`
