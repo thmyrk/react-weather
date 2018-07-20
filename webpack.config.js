@@ -66,6 +66,15 @@ module.exports = {
             name: "./fonts/[name].[ext]"
           }
         }
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: "./images/[name].[ext]"
+          }
+        }
       }
     ]
   },

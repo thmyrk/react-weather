@@ -13,7 +13,7 @@ var Main = () => {
         <Nav />
         <div className="grid-container">
           <div className="grid-x align-center">
-            <div className="cell medium-6 large-4 small-centered">
+            <div className="cell medium-8 large-6 small-centered">
               <Route exact path="/" component={Weather} />
               <Route path="/about" component={About} />
               <Route path="/examples" component={Examples} />

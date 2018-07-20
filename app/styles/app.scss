@@ -1,7 +1,12 @@
 $space-large: 2.5rem;
 $space-small: 2rem;
-$title-color: #555;
-$nav-background-color: #e6e8e9;
+$text-color: #FFF;
+$title-color: #FFF;
+$link-color: #00FFA5;
+$nav-text-color: #2c3e50;
+$nav-background-color: rgba(246,248,249,0.5);;
+$button-color: #00BD7A;
+$button-color-active: #00935F;
 $blue: #1779ba;
 
 @font-face {
@@ -16,49 +21,61 @@ $blue: #1779ba;
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-image: url('./images/background-image.jpeg');
+  background-size: 120%;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
 }
 
 // navbar
 .top-bar {
-  color: #2c3e50;
   background-color: $nav-background-color;
 
   .menu {
-    background-color: $nav-background-color;
+    background-color: inherit;
+    color: $nav-text-color;
 
-    a.active {
-      color: #fefefe;
+    a {
+      color: $nav-text-color;
+
+      &.active {
+        color: #dedede;
+      }
     }
-  }
-
-  .top-bar-left {
-
-  }
-
-  .top-bar-left {
-
   }
 }
 
 // forms
-input[type=search] {
-  border: 2px solid #cbd0d3;
+.main-form {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+input[type=text] {
   border-radius: 0;
 }
 
 .button {
   border-radius: 0;
   font-weight: bold;
+  background-color: $button-color;
+
+  &:active, &:hover {
+    background-color: $button-color-active;
+  }
 
   .blue {
-    background-color: $blue;
     border: 2px solid $blue;
   }
 }
 
-// h1 {
-//   font-size: 40px;
-// }
+h3 {
+  font-family: inherit;
+}
 
 .page-title {
   color: $title-color;
@@ -68,6 +85,8 @@ input[type=search] {
   font-family: 'PoppinsBold';
   text-transform: uppercase;
   letter-spacing: 5px;
+  text-indent: 5px;
+  text-align: center;
 }
 
 .uppercase {
