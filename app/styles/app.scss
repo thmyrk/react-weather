@@ -3,6 +3,7 @@ $space-small: 2rem;
 $text-color: #FFF;
 $title-color: #FFF;
 $link-color: #00FFA5;
+$link-color-active: #00C37E;
 $nav-text-color: #2c3e50;
 $nav-background-color: rgba(246,248,249,0.5);;
 $button-color: #00BD7A;
@@ -28,6 +29,9 @@ body {
 
 a {
   color: $link-color;
+  &:hover, &:active {
+    color: $link-color-active;
+  }
 }
 
 // navbar
