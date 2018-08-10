@@ -23,6 +23,7 @@ table, tbody, tr, td {
 .CitiesPanelText {
   text-align: center;
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 tbody tr:nth-child(even) {
@@ -141,8 +142,8 @@ input[type=text] {
 }
 
 .weather-message {
-  height: 80px;
-  padding: 15px 0 25px 0;
+  height: 95px;
+  padding: 5px 0 25px 0;
 
   h3 {
     size: 1.9375rem;
