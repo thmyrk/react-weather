@@ -5,10 +5,52 @@ $title-color: #FFF;
 $link-color: #00FFA5;
 $link-color-active: #00C37E;
 $nav-text-color: #2c3e50;
-$nav-background-color: rgba(246,248,249,0.5);;
+$nav-background-color: rgba(246,248,249,0.5);
 $button-color: #00BD7A;
 $button-color-active: #00935F;
 $blue: #1779ba;
+$table-background: rgba(46,48,49,0.5);
+$table-background-hover: rgba(0,0,0,0.5);
+$table-is-stripped: 'false';
+$table-stripe: 'odd';
+$footer-color: #00744B;
+
+table, tbody, tr, td {
+  background-color: transparent;
+  border: 15px solid transparent;
+}
+
+.CitiesPanelText {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+tbody tr:nth-child(even) {
+  border-bottom: inherit;
+  background-color: transparent;
+}
+
+td.CityElement {
+  background-color: $table-background;
+  background-clip: padding-box;
+
+  &:hover {
+    background-color: $table-background-hover;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+  }
+}
 
 @font-face {
   font-family: 'Poppins';
@@ -23,8 +65,17 @@ $blue: #1779ba;
 body {
   font-family: 'Poppins', sans-serif;
   background-image: url('./images/background-image.jpeg');
-  background-size: 120%;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $text-color;
+}
+
+html {
+  height: 100%
+}
+
+h3, h4 {
+  font-family: inherit;
 }
 
 a {
@@ -56,7 +107,6 @@ a {
 .main-form {
   width: 60%;
   margin: auto;
-  padding-bottom: 50px;
 }
 
 input[type=text] {
@@ -77,10 +127,7 @@ input[type=text] {
   }
 }
 
-h3 {
-  font-family: inherit;
-}
-
+// main
 .page-title {
   color: $title-color;
   margin-top: $space-small;
@@ -93,10 +140,30 @@ h3 {
   text-align: center;
 }
 
+.weather-message {
+  height: 150px;
+  padding: 25px 0 25px 0;
+
+  h3 {
+    size: 1.9375rem;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .error-modal {
   color: #000;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $footer-color;
+  text-align: center;
+  width: 100%;
 }

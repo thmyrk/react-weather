@@ -3,6 +3,7 @@ import Nav from 'Nav'
 import Weather from 'Weather'
 import About from 'About'
 import Examples from 'Examples'
+import Footer from 'Footer'
 import { Router, Route } from 'react-router-dom'
 import history from 'routerHistory'
 
@@ -17,6 +18,7 @@ var Main = () => {
               <Route exact path="/" component={Weather} />
               <Route path="/about" component={About} />
               <Route path="/examples" component={Examples} />
+              <Footer />
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ var Nav = createReactClass({
             <li className="menu-text">React weather app</li>
             <li><NavLink exact to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</NavLink></li>
             <li><NavLink exact to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</NavLink></li>
-            <li><NavLink exact to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</NavLink></li>
+            <li><NavLink exact to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>More examples</NavLink></li>
           </ul>
         </div>
         <div className="tob-bar-right">
