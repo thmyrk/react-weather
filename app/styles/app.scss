@@ -85,6 +85,7 @@ a {
   }
 }
 
+
 // navbar
 .top-bar {
   background-color: $nav-background-color;
@@ -166,4 +167,9 @@ footer {
   background-color: $footer-color;
   text-align: center;
   width: 100%;
+}
+
+img.github_icon {
+  height: 50px;
+  padding-left: 10px;
 }
