@@ -133,7 +133,6 @@ input[type=text] {
   color: $title-color;
   margin-top: $space-small;
   margin-bottom: $space-small;
-  padding: $space-small;
   font-family: 'PoppinsBold';
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -142,8 +141,8 @@ input[type=text] {
 }
 
 .weather-message {
-  height: 150px;
-  padding: 25px 0 25px 0;
+  height: 80px;
+  padding: 15px 0 25px 0;
 
   h3 {
     size: 1.9375rem;
@@ -170,6 +169,6 @@ footer {
 }
 
 img.github_icon {
-  height: 50px;
+  height: 30px;
   padding-left: 10px;
 }
